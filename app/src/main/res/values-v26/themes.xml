@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.Theme.Wise_Time_Management.light" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">@color/light_blue</item>
+        <item name="colorSecondary">@color/black</item>
+        <item name="android:textColor">@color/black</item>
+
+
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+</resources>

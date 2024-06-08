@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/sidebar_header_horizontal_layout"
+    mlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:paddingTop="30dp"
+    android:orientation="horizontal"
+    android:background="@color/background_dark"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mlns="http://schemas.android.com/tools">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/sidebar_header_imageview_user"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/flaticon_profile_user"
+        app:shapeAppearanceOverlay="@style/circular"
+        app:strokeWidth="3dp"
+        app:strokeColor="@color/background_light"
+        android:padding="3dp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/profile_user_flaticon_url"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/background_light"/>
+
+    <TextView
+        android:id="@+id/sidebar_header_textview_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First Name"
+        android:textSize="22sp"
+        android:padding="6dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="5dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/white" />
+</LinearLayout>

@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_constraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".Activity.PomodoroActivity">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout_pomodoro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:openDrawer="start">
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/sidebar_navigation_view_pomodoro"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/sidebar_layout_header"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:menu="@menu/toolbar_menu"
+            android:background="@color/background_light"
+            app:itemIconTint="@color/black"
+            app:itemTextColor="@color/black"
+            app:subheaderColor="@color/black" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/pomodoro_toolbar_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/pomodoro_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black"
+                    android:elevation="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:maxButtonHeight="50dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/toolbar_exit_pomodoro"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_gravity="left|center_vertical"
+                            android:layout_margin="10dp"
+                            android:layout_weight="0.1"
+                            android:scaleType="fitCenter"
+                            android:scaleX="0.9"
+                            android:scaleY="0.9"
+                            android:src="@drawable/flaticon_back_arrow"
+                            android:contentDescription="@string/back_flaticon_url"
+                            app:backgroundTint="@color/black"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/background_blue" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:layout_weight="0.8"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Pomodoro Session"
+                            android:textColor="@color/background_light"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+                        <!--
+                        <ImageButton
+                            android:id="@+id/toolbar_save_pomodoro"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_margin="10dp"
+                            android:layout_weight="0.1"
+                            android:gravity="right|center_vertical"
+                            android:scaleType="fitCenter"
+                            android:scaleX="1"
+                            android:scaleY="1"
+                            android:src="@drawable/flaticon_check"
+                            android:contentDescription="@string/check_flaticon_url"
+                            app:backgroundTint="@color/background_dark"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/background_blue" />
+                            -->
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ScrollView
+                android:id="@+id/scrollView_pomodoro"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pomodoro_toolbar_constraint"
+                android:maxHeight="400dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/pomodoro_new_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:text="No Title"
+                        android:textColor="@color/white"
+                        android:textSize="22sp"
+                        android:maxLines="1"
+                        android:scrollHorizontally="true"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="340dp"
+                        android:layout_height="340dp"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center_horizontal">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+                            <ImageView
+                                android:id="@+id/pomodoro_imageview_timer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/flaticon_timer"
+                                app:tint="@color/white"
+                                android:contentDescription="A clock inside which is the timer text."/>
+                        </RelativeLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_margin="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" >
+                            <TextView
+                                android:id="@+id/session_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Focus"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/background_blue"/>
+                            <LinearLayout
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:id="@+id/pomodoro_current_minutes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="XX"
+                                    android:textSize="35sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/white" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="3dp"
+                                    android:layout_marginEnd="3dp"
+                                    android:layout_gravity="center"
+                                    android:text=":"
+                                    android:textSize="35sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/white" />
+                                <TextView
+                                    android:id="@+id/pomodoro_current_seconds"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="XX"
+                                    android:textSize="35sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+                            <TextView
+                                android:id="@+id/encouragement_message_textview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Ready?"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/background_light" />
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/start_session_constraint"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/button_sign_up"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+                            <TextView
+                                android:id="@+id/start_session_textview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:text="Start Focus Session"
+                                android:textColor="@color/black"
+                                android:textSize="20dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/pomodoro_settings_constraint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:foregroundGravity="center"
+                            android:text="Pomodoro Settings"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+    <!--
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button_open_note_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/coordinator_bottom_layout_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/flaticon_dots_vertical"
+        android:contentDescription="@string/dots_vertical_url"
+        app:tint="@color/background_blue"
+        android:backgroundTint="@color/background_dark"
+        android:layout_marginEnd="10dp">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/button_note_menu"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:elevation="5dp"
+        android:background="@color/background_dark"
+        app:layout_constraintBottom_toTopOf="@id/coordinator_bottom_layout_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="10dp"
+        android:visibility="invisible">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            app:tint="@color/background_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
+                android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/button_take_picture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/background_dark"
+                    android:contentDescription="@string/photo_camera_url"
+                    android:src="@drawable/flaticon_photo_camera"
+                    app:tint="@color/background_blue"
+                    android:scaleType="centerInside"
+                    android:scaleX="0.70"
+                    android:scaleY="0.70"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
+                android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/button_set_tags"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/background_dark"
+                    android:contentDescription="@string/tag_flaticon_url"
+                    android:src="@drawable/flaticon_tag"
+                    app:tint="@color/background_blue"
+                    android:scaleType="centerInside"
+                    android:scaleX="0.9"
+                    android:scaleY="0.9"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
+                android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/button_close_note_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/background_dark"
+                    android:contentDescription="@string/dots_vertical_url"
+                    android:src="@drawable/flaticon_dots_vertical"
+                    app:tint="@color/white"
+                    android:scaleType="centerInside"
+                    android:scaleX="0.75"
+                    android:scaleY="0.75"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    -->
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator_bottom_layout_2"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:maxHeight="160dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/mainBottomMenu"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom"
+            android:backgroundTint="@color/background_dark"
+            app:fabAlignmentMode="center"
+            app:fabCradleMargin="8dp"
+            app:fabCradleRoundedCornerRadius="50dp"
+            app:fabCradleVerticalOffset="6dp"
+            android:maxHeight="130dp"
+            android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:baselineAligned="true"
+                android:gravity="start"
+                android:isScrollContainer="true"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/burger_menu_linear_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/burger_menu_Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@color/background_dark"
+                        android:contentDescription="@string/burger_menu_flaticon_url"
+                        android:scaleType="centerInside"
+                        android:scaleX="0.6"
+                        android:scaleY="0.6"
+                        android:src="@drawable/flaticon_burger_bar"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/burger_menu_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pomodoro_linear_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/pomodoro_Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@color/background_dark"
+                        android:contentDescription="@string/pomodoro_flaticon_url"
+                        android:scaleType="centerInside"
+                        android:scaleX="0.6"
+                        android:scaleY="0.6"
+                        android:src="@drawable/flaticon_pomodoro"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/pomodoro_Text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/timer"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gallery_linearLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/gallery_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@color/background_dark"
+                        android:contentDescription="@string/report_flaticon_url"
+                        android:scaleType="centerInside"
+                        android:scaleX="0.5"
+                        android:scaleY="0.5"
+                        android:src="@drawable/flaticon_gallery"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/gallery_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/gallery"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/settings_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/settings_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@color/background_dark"
+                        android:contentDescription="@string/gear_flaticon_url"
+                        android:scaleType="centerInside"
+                        android:scaleX="0.48"
+                        android:scaleY="0.48"
+                        android:src="@drawable/flaticon_gear"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/settings_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/settings"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/calendarView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/background_blue"
+            android:contentDescription="@string/calendar_flaticon_url"
+            android:elevation="3dp"
+            android:src="@drawable/flaticon_calendar_from"
+            app:layout_anchor="@id/mainBottomMenu"
+            app:tint="@color/black">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

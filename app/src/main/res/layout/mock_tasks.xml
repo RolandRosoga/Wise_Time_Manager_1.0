@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tasks_mock"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/background_dark"
+    android:layout_margin="10dp"
+    android:elevation="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/background_dark"
+                android:orientation="horizontal"
+                android:layout_weight="0.6">
+
+                <TextView
+                    android:id="@+id/tasks_mock_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:text="Untitled Task"
+                    android:layout_margin="10dp"
+                    android:textSize="21sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:gravity="start"
+                    android:scrollHorizontally="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/mock_progress_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="0.4"
+                android:gravity="end">
+
+                <TextView
+                    android:id="@+id/task_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_margin="5dp"
+                    android:text="Progress"
+                    android:textStyle="bold|italic"
+                    android:textColor="@color/white"
+                    android:textSize="21sp"
+                    android:shadowRadius="3"
+                    android:shadowColor="@color/black"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tasks_mock_text"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Write a new task."
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/background_light" />
+
+        <TextView
+            android:id="@+id/task_time_window"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Time XX:xx"
+            android:textSize="19sp"
+            android:layout_margin="5dp"
+            android:textColor="@color/background_blue"
+            android:textStyle="bold"
+            android:shadowColor="@color/black"
+            android:shadowRadius="3"/>
+
+        <LinearLayout
+            android:id="@+id/task_chip_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/chip1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp">
+                <ImageView
+                    android:id="@+id/imageview_chip1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/blue_button"
+                    app:tint="@color/white"
+                    android:contentDescription="First Category"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textview_chip1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chip1"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/chip2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp">
+                <ImageView
+                    android:id="@+id/imageview_chip2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/blue_button"
+                    app:tint="@color/white"
+                    android:contentDescription="Second Category"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textview_chip2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chip2"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/chip3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp">
+            <ImageView
+                android:id="@+id/imageview_chip3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/blue_button"
+                app:tint="@color/white"
+                android:contentDescription="Third Category"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textview_chip3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chip3"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!--
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Chip1"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    app:chipBackgroundColor="@color/white"
+                    android:visibility="invisible"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Chip2"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    app:chipBackgroundColor="@color/white"
+                    android:visibility="invisible"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Chip3"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    app:chipBackgroundColor="@color/white"
+                    android:visibility="invisible"/>
+
+            </com.google.android.material.chip.ChipGroup>
+            -->
+
+
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

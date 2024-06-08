@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimaryDark">#FF000000</color>
+    <color name="text_shadow">#7F000000</color>
+    <color name="background_blue">#6EBEF0</color>
+    <color name="background_dark">#272727</color>
+    <color name="background_light">#BFBFBF</color>
+    <color name="blue_gray">#7B8E9B</color>
+
+    <!--important, entertainment, work, study, fitness -->
+    <color name="red">#FF0000</color>
+    <color name="yellow">#F0EE6E</color>
+    <color name="green">#36894D</color>
+    <color name="blue">#1A83D7</color>
+    <color name="purple">#673AB7</color>
+    <color name="gold">#C39D2E</color>
+    <color name="pink">#EF6EF0</color>
+
+    <color name="dark_red">#992923</color>
+    <color name="light_blue">#6EBEF0</color>
+    <color name="dark_blue">#363D8A</color>
+    <color name="light_red">#F06E6E</color>
+</resources>

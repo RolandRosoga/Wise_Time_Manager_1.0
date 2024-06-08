@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED " />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+
+    <application
+        android:name=".Application.WiseTimeManagerApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/wtm_launcher"
+        android:label="Wise Time"
+        android:roundIcon="@mipmap/wtm_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Base.Theme.Wise_Time_Management.dark"
+        android:windowSoftInputMode="adjustPan|adjustNothing">
+        <!--tools:targetApi="30"-->
+        <receiver android:name=".Notification.AlarmReceiver"/>
+
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:exported="true"
+            android:theme="@style/Base.Theme.Wise_Time_Management.light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.IntroApplicationActivity"
+            android:label="Application Intro"/>
+        <activity
+            android:name=".Activity.MainActivity"
+            android:label="Home"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".Activity.NotesActivity"
+            android:label="Notes"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".Activity.TasksActivity"
+            android:label="Tasks"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".Activity.TagsActivity"
+            android:label="Tags"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".Activity.AddNoteActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".Activity.EditNoteActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".Activity.AddTaskActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".Activity.EditTaskActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".Activity.SettingsActivity"
+            android:label="Settings"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".Activity.CalendarActivity"
+            android:label="Calendar"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".Activity.YourProfileActivity"
+            android:label="Your Profile"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".Activity.RegisterActivity"
+            android:label="Register"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".Activity.PomodoroActivity"
+            android:label="Pomodoro"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".Activity.AboutUsActivity"
+            android:label="About Us"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".Activity.GalleryActivity"
+            android:label="Gallery"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+    </application>
+
+</manifest>

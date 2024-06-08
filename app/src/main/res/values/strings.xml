@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name">Wise_Time_Management</string>
+    <string name="wise_time_management">Wise Time Management</string>
+    <string name="get_started">Get started</string>
+    <string name="information_panel_image">Information Panel Image</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="hello">Hello</string>
+    <string name="wise_time_manager">Wise Time Manager</string>
+    <string name="notes">Notes:</string>
+    <string name="home">Home</string>
+    <string name="pomodoro">Pomodoro</string>
+    <string name="calendar">Calendar</string>
+    <string name="reports">Reports</string>
+    <string name="settings">Settings</string>
+    <string name="lorem_ipsum">Lorem ipsum dolwor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus. Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis. Etiam imperdiet imperdiet orci. Nunc nec neque. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa. Sed cursus turpis vitae tortor. Donec posuere vulputate arcu. Phasellus accumsan cursus velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Phasellus consectetuer vestibulum elit. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Vestibulum fringilla pede sit amet augue. In turpis. Pellentesque posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. Nullam sagittis. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce id purus. Ut varius tincidunt libero. Phasellus dolor. Maecenas vestibulum mollis diam. Pellentesque ut neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. In ac felis quis tortor malesuada pretium. Pellentesque auctor neque nec urna. Proin sapien ipsum, porta a, auctor quis, euismod ut, mi. Aenean viverra rhoncus pede. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut non enim eleifend felis pretium feugiat. Vivamus quis mi. Phasellus a est. Phasellus magna. In hac habitasse platea dictumst. Curabitur at lacus ac velit ornare lobortis. Curabitur a felis in nunc fringilla tristique. Morbi mattis ullamcorper velit. Phasellus gravida semper nisi. Nullam vel sem. Pellentesque libero tortor, tincidunt et, tincidunt eget, semper nec, quam. Sed hendrerit. Morbi ac felis. Nunc egestas, augue at pellentesque laoreet, felis eros vehicula leo, at malesuada velit leo quis pede. Donec interdum, metus et hendrerit aliquet, dolor diam sagittis ligula, eget egestas libero turpis vel mi. Nunc nulla. Fusce risus nisl, viverra et, tempor et, pretium in, sapien. Donec venenatis vulputate lorem. Morbi nec metus. Phasellus blandit leo ut odio. Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem. Sed magna purus, fermentum eu, tincidunt eu, varius ut, felis. In auctor lobortis lacus. Quisque libero metus, condimentum nec, tempor a, commodo mollis, magna. Vestibulum ullamcorper mauris at ligula. Fusce fermentum. Nullam cursus lacinia erat. Praesent blandit laoreet nibh. Fusce convallis metus id felis luctus adipiscing. Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Quisque id mi. Ut tincidunt tincidunt erat. Etiam feugiat lorem non metus. Vestibulum dapibus nunc ac augue. Curabitur vestibulum aliquam leo. Praesent egestas neque eu enim. In hac habitasse platea dictumst. Fusce a quam. Etiam ut purus mattis mauris sodales aliquam. Curabitur nisi. Quisque malesuada placerat nisl. Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus. Sed augue ipsum, egestas nec, vestibulum et, malesuada adipiscing, dui. Vestibulum facilisis, purus nec pulvinar iaculis, ligula mi congue nunc, vitae euismod ligula urna in dolor. Mauris sollicitudin fermentum libero. Praesent nonummy mi in odio. Nunc interdum lacus sit amet orci. Vestibulum rutrum, mi nec elementum vehicula, eros quam gravida nisl, id fringilla neque ante vel mi. Morbi mollis tellus ac sapien. Phasellus volutpat, metus eget egestas mollis, lacus lacus blandit dui, id egestas quam mauris ut lacus. Fusce vel dui. Sed in libero ut nibh placerat accumsan. Proin faucibus arcu quis ante. In consectetuer turpis ut velit. Nulla sit amet est. Praesent metus tellus, elementum eu, semper a, adipiscing nec, purus. Cras risus ipsum, faucibus ut, ullamcorper id, varius ac, leo. Suspendisse feugiat. Suspendisse enim turpis, dictum sed, iaculis a, condimentum nec, nisi. Praesent nec nisl a purus blandit viverra. Praesent ac massa at ligula laoreet iaculis. Nulla neque dolor, sagittis eget, iaculis quis, molestie non, velit. Mauris turpis nunc, blandit et, volutpat molestie, porta ut, ligula. Fusce pharetra convallis urna. Quisque ut nisi. Donec mi odio, faucibus at, scelerisque quis</string>
+    <string name="burger_menu_flaticon_url"><a href="https://www.flaticon.com/free-icons/menu" title="menu icons">Menu icons created by Febrian Hidayat - Flaticon</a></string>
+    <string name="pomodoro_flaticon_url"><a href="https://www.flaticon.com/free-icons/pomodoro" title="pomodoro icons">Pomodoro icons created by nangicon - Flaticon</a></string>
+    <string name="calendar_flaticon_url"><a href="https://www.flaticon.com/free-icons/calendar" title="calendar icons">Calendar icons created by Freepik - Flaticon</a></string>
+    <string name="dots_flaticon_url"><a href="https://www.flaticon.com/free-icons/dots" title="dots icons">Dots icons created by Ayub Irawan - Flaticon</a></string>
+    <string name="report_flaticon_url"><a href="https://www.flaticon.com/free-icons/report" title="report icons">Report icons created by Freepik - Flaticon</a></string>
+    <string name="gear_flaticon_url"><a href="https://www.flaticon.com/free-icons/gear" title="gear icons">Gear icons created by Freepik - Flaticon</a></string>
+    <string name="check_flaticon_url"><a href="https://www.flaticon.com/free-icons/tick" title="tick icons">Tick icons created by Maxim Basinski Premium - Flaticon</a></string>
+    <string name="cross_flaticon_url"><a href="https://www.flaticon.com/free-icons/close" title="close icons">Close icons created by VectorPortal - Flaticon</a></string>
+    <string name="user_flaticon_url"><a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Freepik - Flaticon</a></string>
+    <string name="profile_user_flaticon_url"><a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Freepik - Flaticon</a></string>
+    <string name="back_flaticon_url"><a href="https://www.flaticon.com/free-icons/arrow" title="arrow icons">Arrow icons created by Kirill Kazachek - Flaticon</a></string>
+    <string name="logout_flaticon_url"><a href="https://www.flaticon.com/free-icons/logout" title="logout icons">Logout icons created by Pixel perfect - Flaticon</a></string>
+    <string name="tag_flaticon_url"><a href="https://www.flaticon.com/free-icons/tag" title="tag icons">Tag icons created by itim2101 - Flaticon</a></string>
+    <string name="gallery_flaticon_url"><a href="https://www.flaticon.com/free-icons/gallery" title="gallery icons">Gallery icons created by Superndre - Flaticon</a></string>
+    <string name="notes_flaticon_url"><a href="https://www.flaticon.com/free-icons/notepad" title="notepad icons">Notepad icons created by Freepik - Flaticon</a></string>
+    <string name="tasks_flaticon_url"><a href="https://www.flaticon.com/free-icons/list" title="list icons">List icons created by Freepik - Flaticon</a></string>
+    <string name="share_flaticon_url"><a href="https://www.flaticon.com/free-icons/share" title="share icons">Share icons created by Freepik - Flaticon</a></string>
+    <string name="home_flaticon_url"><a href="https://www.flaticon.com/free-icons/home-button" title="home button icons">Home button icons created by Freepik - Flaticon</a></string>
+    <string name="login_flaticon_url"><a href="https://www.flaticon.com/free-icons/log-in" title="log in icons">Log in icons created by sonnycandra - Flaticon</a></string>
+    <string name="search_flaticon_url"><a href="https://www.flaticon.com/free-icons/search" title="search icons">Search icons created by Chanut - Flaticon</a></string>
+    <string name="add_flaticon_url"><a href="https://www.flaticon.com/free-icons/plus" title="plus icons">Plus icons created by srip - Flaticon</a></string>
+    <string name="photo_camera_url"><a href="https://www.flaticon.com/free-icons/photo-camera" title="photo camera icons">Photo camera icons created by Kiranshastry - Flaticon</a></string>
+    <string name="dots_vertical_url"><a href="https://www.flaticon.com/free-icons/more" title="more icons">More icons created by Kirill Kazachek - Flaticon</a></string>
+    <string name="checkbox_true_url"><a href="https://www.flaticon.com/free-icons/checkbox" title="checkbox icons">Checkbox icons created by inkubators - Flaticon</a></string>
+    <string name="down_right_arrow_url"><a href="https://www.flaticon.com/free-icons/next" title="next icons">Next icons created by Roundicons - Flaticon</a></string>
+    <string name="checkbox_false">Original/Made by Rosoga Radu-Roland</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="timer">Timer</string>
+    <string name="notes_text">Notes</string>
+    <string name="add_a_new_note">   + Add a new Note</string>
+    <string name="no_comment">No comment.</string>
+    <string name="add_a_note_here">Add a note here.</string>
+    <string name="radu_rosoga">Radu Rosoga</string>
+    <string name="string_button">button</string>
+    <string name="tasks_text">Tasks</string>
+    <string name="add_a_new_task">   + Add a new Task</string>
+    <string name="user_name">User Name:</string>
+    <string name="password">Password:</string>
+    <string name="gallery">Gallery</string>
+    <string name="new_title">New Title</string>
+    <string name="application_logo">Application Logo</string>
+    <string name="share">Share</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="about_us">About Us</string>
+    <string name="share_our_app_button">Share Our App Button</string>
+    <string name="rate_us_button">Rate Us Button</string>
+    <string name="gallery_button">Gallery Button</string>
+    <string name="feedback">Feedback</string>
+    <string name="log_out_button">Log-Out Button</string>
+    <string name="log_out">Log Out</string>
+    <string name="my_profile_button">My Profile Button</string>
+    <string name="my_profile">My Profile</string>
+    <string name="profile">Profile</string>
+    <string name="tags_button">Tags Button</string>
+    <string name="tags">Tags</string>
+    <string name="tasks">Tasks</string>
+    <string name="tasks_button">Tasks Button</string>
+    <string name="notes_button">Notes Button</string>
+    <string name="home_button">Home Button</string>
+    <string name="home_button_toolbar_text">Home Button</string>
+    <string name="notes_button_toolbar_text">Notes Button</string>
+</resources>

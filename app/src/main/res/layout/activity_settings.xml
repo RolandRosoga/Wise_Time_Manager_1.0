@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settings_main_constraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".Activity.SettingsActivity">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout_settings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:openDrawer="start">
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/sidebar_navigation_view_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/sidebar_layout_header"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:menu="@menu/toolbar_menu"
+            android:background="@color/background_light"
+            app:itemIconTint="@color/black"
+            app:itemTextColor="@color/black"
+            app:subheaderColor="@color/black" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/settings_toolbar_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/settings_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background_dark"
+                    android:elevation="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:maxButtonHeight="50dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/toolbar_exit_settings"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_gravity="left|center_vertical"
+                            android:layout_margin="10dp"
+                            android:layout_weight="0.1"
+                            android:scaleType="fitCenter"
+                            android:scaleX="0.9"
+                            android:scaleY="0.9"
+                            android:src="@drawable/flaticon_back_arrow"
+                            android:contentDescription="@string/back_flaticon_url"
+                            app:backgroundTint="@color/background_dark"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/background_blue" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:layout_weight="0.8"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Settings"
+                            android:textColor="@color/white"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/toolbar_save_settings"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_margin="10dp"
+                            android:layout_weight="0.1"
+                            android:gravity="right|center_vertical"
+                            android:scaleType="fitCenter"
+                            android:scaleX="1"
+                            android:scaleY="1"
+                            android:src="@drawable/flaticon_check"
+                            android:contentDescription="@string/check_flaticon_url"
+                            app:backgroundTint="@color/background_dark"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/background_blue" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ScrollView
+                android:id="@+id/scrollView_settings"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/settings_toolbar_constraint"
+                android:maxHeight="400dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="YOUR PROFILE:"
+                            android:textColor="@color/background_light"
+                            android:textSize="20sp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:background="@color/background_dark">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingStart="20dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Username:"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/background_light"
+                                    android:layout_marginTop="20dp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Password:"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/background_light"
+                                    android:layout_marginTop="10dp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Full Name:"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/background_light"
+                                    android:layout_marginTop="10dp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Email:"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/background_light"
+                                    android:layout_marginTop="10dp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Phone:"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/background_light"
+                                    android:layout_marginTop="10dp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Google:"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/background_light"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginStart="10dp">
+                                <TextView
+                                    android:id="@+id/text_username"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="user_name"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="20dp"/>
+                                <TextView
+                                    android:id="@+id/text_password"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="######"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="10dp"/>
+                                <TextView
+                                    android:id="@+id/text_full_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="John Doe"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="10dp"/>
+                                <TextView
+                                    android:id="@+id/text_email"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textSize="18sp"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="10dp"/>
+                                <TextView
+                                    android:id="@+id/text_phone_number"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textSize="18sp"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="10dp"/>
+                                <TextView
+                                    android:id="@+id/text_google_sign_in"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="disabled"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/constraint_edit_personal_details"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/background_light">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Edit Personal Details"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/black"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:layout_margin="7dp"/>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="POMODORO SETTINGS"
+                            android:textColor="@color/background_light"
+                            android:textSize="20sp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:background="@color/background_dark">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingStart="20dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Focus Time (min):"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/background_light"
+                                    android:layout_marginTop="20dp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Free Time (min):"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/background_light"
+                                    android:layout_marginTop="10dp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Save as Task:"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/background_light"
+                                    android:layout_marginTop="10dp"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginStart="10dp">
+                                <EditText
+                                    android:id="@+id/settings_pomodoro_work_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="datetime"
+                                    android:text="focus time"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="20dp"
+                                    android:paddingEnd="10sp"
+                                    android:maxLines="1"
+                                    android:scrollHorizontally="true"
+                                    android:singleLine="true"
+                                    android:background="@null"/>
+                                <EditText
+                                    android:id="@+id/settings_pomodoro_free_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="leisure time"
+                                    android:inputType="datetime"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="10dp"
+                                    android:paddingEnd="10sp"
+                                    android:maxLines="1"
+                                    android:scrollHorizontally="true"
+                                    android:singleLine="true"
+                                    android:background="@null"/>
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/constraint_set_pomodoro_task"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="10dp"
+                                    android:paddingEnd="20sp"
+                                    android:layout_marginBottom="10dp">
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        tools:ignore="TooDeepLayout">
+                                        <TextView
+                                            android:id="@+id/settings_pomodoro_save_task_true"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@null"
+                                            android:paddingEnd="10sp"
+                                            android:scrollHorizontally="true"
+                                            android:text="enabled"
+                                            android:textColor="@color/background_blue"
+                                            android:textSize="18sp"
+                                            android:visibility="visible"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            tools:ignore="TooDeepLayout" />
+                                        <TextView
+                                            android:id="@+id/settings_pomodoro_save_task_false"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@null"
+                                            android:paddingEnd="10sp"
+                                            android:scrollHorizontally="true"
+                                            android:text="disabled"
+                                            android:textColor="@color/background_light"
+                                            android:textSize="18sp"
+                                            android:visibility="invisible"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toStartOf="@+id/settings_pomodoro_save_task_true"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            tools:ignore="MissingConstraints" />
+                                    </RelativeLayout>
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="RESET TO DEFAULT"
+                            android:textColor="@color/background_light"
+                            android:textSize="20sp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@color/background_dark">
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/background_light" />
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/constraint_reset_tags"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="20dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Reset Tags to default"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="TooDeepLayout"
+                                    android:layout_margin="10dp" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/background_light" />
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/constraint_delete_all_tags"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="20dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Delete all Tags!"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="TooDeepLayout"
+                                    android:layout_margin="10dp"/>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/background_light" />
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/constraint_delete_all_notes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="20dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Delete all Notes!"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="TooDeepLayout"
+                                    android:layout_margin="10dp"/>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/background_light" />
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/constraint_delete_all_tasks"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="20dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Delete all Tasks!"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="TooDeepLayout"
+                                    android:layout_margin="10dp"/>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/background_light" />
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/constraint_delete_all_pictures"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="20dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Delete all Pictures!"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="TooDeepLayout"
+                                    android:layout_margin="10dp"/>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/background_light" />
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/constraint_reset_all_to_default"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="20dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Reset all to default"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="TooDeepLayout"
+                                    android:layout_margin="10dp"/>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/background_light" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"/>
+                </LinearLayout>
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator_bottom_layout_2"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:maxHeight="160dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/mainBottomMenu"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom"
+            android:backgroundTint="@color/background_dark"
+            app:fabAlignmentMode="center"
+            app:fabCradleMargin="8dp"
+            app:fabCradleRoundedCornerRadius="50dp"
+            app:fabCradleVerticalOffset="6dp"
+            android:maxHeight="130dp"
+            android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:baselineAligned="true"
+                android:gravity="start"
+                android:isScrollContainer="true"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/burger_menu_linear_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/burger_menu_Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@color/background_dark"
+                        android:contentDescription="@string/burger_menu_flaticon_url"
+                        android:scaleType="centerInside"
+                        android:scaleX="0.6"
+                        android:scaleY="0.6"
+                        android:src="@drawable/flaticon_burger_bar"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/burger_menu_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pomodoro_linear_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/pomodoro_Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@color/background_dark"
+                        android:contentDescription="@string/pomodoro_flaticon_url"
+                        android:scaleType="centerInside"
+                        android:scaleX="0.6"
+                        android:scaleY="0.6"
+                        android:src="@drawable/flaticon_pomodoro"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/pomodoro_Text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/timer"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gallery_linearLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/gallery_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@color/background_dark"
+                        android:contentDescription="@string/report_flaticon_url"
+                        android:scaleType="centerInside"
+                        android:scaleX="0.5"
+                        android:scaleY="0.5"
+                        android:src="@drawable/flaticon_gallery"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/gallery_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/gallery"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/settings_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/settings_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@color/background_dark"
+                        android:contentDescription="@string/gear_flaticon_url"
+                        android:scaleType="centerInside"
+                        android:scaleX="0.48"
+                        android:scaleY="0.48"
+                        android:src="@drawable/flaticon_gear"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/settings_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/settings"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/calendarView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/background_blue"
+            android:contentDescription="@string/calendar_flaticon_url"
+            android:elevation="3dp"
+            android:src="@drawable/flaticon_calendar_from"
+            app:layout_anchor="@id/mainBottomMenu"
+            app:tint="@color/black">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

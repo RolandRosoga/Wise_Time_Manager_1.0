@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".Activity.MainActivity" >
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:openDrawer="start">
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/sidebar_navigation_view_main"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/sidebar_layout_header"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:menu="@menu/toolbar_menu"
+            android:background="@color/background_light"
+            app:itemIconTint="@color/black"
+            app:itemTextColor="@color/black"
+            app:subheaderColor="@color/black"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200sp">
+
+                        <ImageView
+                            android:id="@+id/home_imageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="false"
+                            android:layout_marginTop="-2dp"
+                            android:layout_marginBottom="0dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/dan_cristian_paduret" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/greetingAddress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="24dp"
+                                android:layout_marginTop="70dp"
+                                android:layout_marginEnd="24dp"
+                                android:layout_marginBottom="24dp"
+                                android:shadowColor="@color/text_shadow"
+                                android:shadowDx="2"
+                                android:shadowDy="2"
+                                android:shadowRadius="2"
+                                android:textColor="@color/white"
+                                android:textSize="30sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/currentDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="24dp"
+                                android:layout_marginTop="20dp"
+                                android:shadowColor="@color/text_shadow"
+                                android:shadowDx="2"
+                                android:shadowDy="2"
+                                android:shadowRadius="2"
+                                android:textColor="@color/white"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/greetingAddress" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </RelativeLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:orientation="horizontal">
+                                <LinearLayout
+                                    android:id="@+id/notesButton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_weight="0.3">
+                                    <TextView
+                                        android:id="@+id/Notes"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="24dp"
+                                        android:layout_marginTop="16dp"
+                                        android:textSize="24sp"
+                                        android:textStyle="normal"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        tools:ignore="TooDeepLayout" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_weight="0.5" />
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_weight="0.2">
+                                    <ImageButton
+                                        android:id="@+id/add_new_note_main_button"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:contentDescription="@string/add_flaticon_url"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/flaticon_add"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_margin="5dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:tint="@color/background_blue"
+                                        android:background="@color/black"
+                                        android:scaleX="0.5"
+                                        android:scaleY="0.5"
+                                        android:gravity="end"
+                                        tools:ignore="TooDeepLayout"/>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/main_notes_recycler"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:scrollbars="vertical"/>
+                            </LinearLayout>
+
+                            <View
+                                android:id="@+id/divider1"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@color/background_light" />
+                            <!-- We start building the CalendarView-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:weightSum="1"
+                                android:background="@color/background_dark">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Task Calendar"
+                                        android:textSize="26sp"
+                                        android:textColor="@color/white"/>
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                            <include
+                                android:id="@+id/calendar_week_days_container"
+                                layout="@layout/calendar_week_days"/>
+                            <com.kizitonwose.calendar.view.CalendarView
+                                android:id="@+id/main_calendar_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                app:cv_dayViewResource="@layout/calendar_day_layout"
+                                app:cv_monthHeaderResource="@layout/calendar_header"
+                                android:background="@color/background_dark"
+                                app:cv_orientation="horizontal"
+                                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                                app:cv_scrollPaged="true"
+                                app:cv_outDateStyle="endOfGrid"/>
+                            <View
+                                android:id="@+id/divider2"
+                                android:layout_width="match_parent"
+                                android:layout_height="2sp"
+                                android:background="@color/background_light" />
+                            <TextView
+                                android:id="@+id/main_task_for_the_day"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="5dp"
+                                android:text="Tasks of the day"
+                                android:textSize="22sp"
+                                android:textStyle="normal"
+                                android:textColor="@color/white"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="TooDeepLayout" />
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/chosen_tasks_recyclerview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                            <!--Blank space we leave, for page fitting-->
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="200dp"
+                                android:background="@null"/>
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/mainBottomMenu"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_gravity="bottom"
+            android:backgroundTint="@color/background_dark"
+            app:fabCradleMargin="8dp"
+            app:fabCradleRoundedCornerRadius="50dp"
+            app:fabCradleVerticalOffset="6dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/burger_menu_linear_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/burger_menu_Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/flaticon_burger_bar"
+                        android:scaleType="centerInside"
+                        android:contentDescription="@string/burger_menu_flaticon_url"
+                        android:layout_weight="0.5"
+                        app:tint="@color/white"
+                        android:background="@color/background_dark"
+                        android:scaleY="0.6"
+                        android:scaleX="0.6"/>
+
+                    <TextView
+                        android:id="@+id/burger_menu_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pomodoro_linear_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/pomodoro_Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/flaticon_pomodoro"
+                        android:scaleType="centerInside"
+                        android:contentDescription="@string/pomodoro_flaticon_url"
+                        android:layout_weight="0.5"
+                        app:tint="@color/white"
+                        android:background="@color/background_dark"
+                        android:scaleY="0.6"
+                        android:scaleX="0.6"/>
+
+                    <TextView
+                        android:id="@+id/pomodoro_Text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/timer"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gallery_linearLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/gallery_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@color/background_dark"
+                        android:contentDescription="@string/report_flaticon_url"
+                        android:scaleType="centerInside"
+                        android:scaleX="0.5"
+                        android:scaleY="0.5"
+                        android:src="@drawable/flaticon_gallery"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/gallery_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/gallery"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/settings_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/settings_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/flaticon_gear"
+                        android:scaleType="centerInside"
+                        android:contentDescription="@string/gear_flaticon_url"
+                        android:layout_weight="0.5"
+                        app:tint="@color/white"
+                        android:background="@color/background_dark"
+                        android:scaleX="0.48"
+                        android:scaleY="0.48"/>
+
+                    <TextView
+                        android:id="@+id/settings_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="10dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/calendarView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/calendar_flaticon_url"
+            android:src="@drawable/flaticon_calendar_from"
+            android:backgroundTint="@color/background_blue"
+            app:tint="@color/black"
+            android:elevation="3dp"
+            app:layout_anchor="@id/mainBottomMenu">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

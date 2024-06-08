@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/sidebar_home"
+            android:contentDescription="@string/home_button"
+            android:icon="@drawable/flaticon_home"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/sidebar_notes"
+            android:contentDescription="@string/notes_button"
+            android:icon="@drawable/flaticon_notes"
+            android:title="@string/notes_text" />
+
+        <item
+            android:id="@+id/sidebar_task"
+            android:contentDescription="@string/tasks_button"
+            android:icon="@drawable/flaticon_tasks"
+            android:title="@string/tasks" />
+
+        <item
+            android:id="@+id/sidebar_tags"
+            android:contentDescription="@string/tags_button"
+            android:icon="@drawable/flaticon_tag"
+            android:title="@string/tags" />
+    </group>
+
+    <item android:title="@string/profile">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/sidebar_profile_about"
+                    android:contentDescription="@string/my_profile_button"
+                    android:icon="@drawable/flaticon_profile_user"
+                    android:title="@string/my_profile" />
+                <item
+                    android:id="@+id/sidebar_log_out"
+                    android:contentDescription="@string/log_out_button"
+                    android:icon="@drawable/flaticon_logout"
+                    android:title="@string/log_out" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="@string/feedback">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/sidebar_share"
+                    android:contentDescription="@string/share_our_app_button"
+                    android:icon="@drawable/flaticon_share"
+                    android:title="@string/share" />
+                <item
+                    android:id="@+id/sidebar_rate_us"
+                    android:contentDescription="@string/rate_us_button"
+                    android:icon="@drawable/android_baseline_rate_review_icon"
+                    android:title="@string/rate_us" />
+                <item
+                    android:id="@+id/about_us"
+                    android:contentDescription="@string/gallery_button"
+                    android:icon="@drawable/flaticon_information"
+                    android:title="@string/about_us" />
+            </group>
+        </menu>
+    </item>
+</menu>

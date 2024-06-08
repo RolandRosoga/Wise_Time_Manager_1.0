@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/notes_mock"
+    android:layout_width="match_parent"
+    android:layout_height="210dp"
+    app:cardBackgroundColor="@color/background_dark"
+    android:layout_margin="10dp"
+    android:elevation="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/background_dark"
+                android:orientation="horizontal"
+                android:layout_weight="0.7">
+                <TextView
+                    android:id="@+id/notes_mock_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:text="Untitled Note"
+                    android:layout_margin="10dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/background_light"
+                    android:textStyle="bold"
+                    android:gravity="start"
+                    android:scrollHorizontally="true">
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/mock_image_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="0.3"
+                android:gravity="end">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/notes_tag_image_3"
+                    android:layout_width="40sp"
+                    android:layout_height="40sp"
+                    android:src="@drawable/flaticon_tag"
+                    android:contentDescription="@string/tag_flaticon_url"
+                    app:tint="@color/white"
+                    android:visibility="invisible"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/notes_tag_image_2"
+                    android:layout_width="40sp"
+                    android:layout_height="40sp"
+                    android:src="@drawable/flaticon_tag"
+                    android:contentDescription="@string/tag_flaticon_url"
+                    app:tint="@color/white"
+                    android:visibility="invisible"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/notes_tag_image_1"
+                    android:layout_width="40sp"
+                    android:layout_height="40sp"
+                    android:src="@drawable/flaticon_tag"
+                    android:contentDescription="@string/tag_flaticon_url"
+                    app:tint="@color/white" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/notes_mock_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Write a new note."
+            android:layout_margin="10dp"
+            android:textSize="14sp"
+            android:maxLines="5"
+            android:textColor="@color/white">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/notes_mock_date"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:text="Current date."
+            android:textSize="18sp"
+            android:layout_margin="10dp"
+            android:textColor="@color/background_light">
+
+        </TextView>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

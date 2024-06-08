@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_note_main_constraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".Activity.AddNoteActivity">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout_add_notes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:openDrawer="start">
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/sidebar_navigation_view_add_notes"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/sidebar_layout_header"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:menu="@menu/toolbar_menu"
+            android:background="@color/background_light"
+            app:itemIconTint="@color/black"
+            app:itemTextColor="@color/black"
+            app:subheaderColor="@color/black" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/add_notes_toolbar_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/add_notes_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background_dark"
+                    android:elevation="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:maxButtonHeight="50dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/toolbar_exit_add_note"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_gravity="left|center_vertical"
+                            android:layout_margin="10dp"
+                            android:layout_weight="0.1"
+                            android:scaleType="fitCenter"
+                            android:scaleX="0.9"
+                            android:scaleY="0.9"
+                            android:src="@drawable/flaticon_back_arrow"
+                            android:contentDescription="@string/back_flaticon_url"
+                            app:backgroundTint="@color/background_dark"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/background_blue" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:layout_weight="0.8"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Save a new Note"
+                            android:textColor="@color/white"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/toolbar_save_add_note"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_margin="10dp"
+                            android:layout_weight="0.1"
+                            android:gravity="right|center_vertical"
+                            android:scaleType="fitCenter"
+                            android:scaleX="1"
+                            android:scaleY="1"
+                            android:src="@drawable/flaticon_check"
+                            android:contentDescription="@string/check_flaticon_url"
+                            app:backgroundTint="@color/background_dark"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/background_blue" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ScrollView
+                android:id="@+id/scrollView_add_notes"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/add_notes_toolbar_constraint"
+                android:maxHeight="400dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="10">
+
+                    <EditText
+                        android:id="@+id/edit_new_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center_vertical"
+                        android:hint="@string/new_title"
+                        android:textColorHint="@color/background_light"
+                        android:textColor="@color/background_light"
+                        android:textSize="22sp"
+                        android:maxHeight="100dp"
+                        android:inputType="textMultiLine"
+                        android:backgroundTint="@color/background_blue"/>
+
+                    <EditText
+                        android:id="@+id/edit_new_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:layout_weight="9.5"
+                        android:hint="Type your note."
+                        android:textColorHint="@color/background_light"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:gravity="top"
+                        android:maxLines="16"
+                        android:singleLine="false"
+                        android:scrollbars="vertical"
+                        android:overScrollMode="always"
+                        android:scrollbarStyle="insideInset"
+                        android:fadeScrollbars="false"
+                        android:scrollbarSize="10dp"
+                        android:background="@null"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/images_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="400dp"/>
+                </LinearLayout>
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button_open_note_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/coordinator_bottom_layout_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/flaticon_dots_vertical"
+        android:contentDescription="@string/dots_vertical_url"
+        app:tint="@color/background_blue"
+        android:backgroundTint="@color/background_dark"
+        android:layout_marginEnd="10dp">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/button_note_menu"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:elevation="5dp"
+        android:background="@color/background_dark"
+        app:layout_constraintBottom_toTopOf="@id/coordinator_bottom_layout_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="10dp"
+        android:visibility="invisible">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            app:tint="@color/background_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
+                android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/button_save_from_gallery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/background_dark"
+                    android:contentDescription="Button to save pictures and videos from Gallery."
+                    android:src="@drawable/flaticon_gallery"
+                    app:tint="@color/background_blue"
+                    android:scaleType="centerInside"
+                    android:scaleX="0.70"
+                    android:scaleY="0.70"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
+                android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/button_set_tags"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/background_dark"
+                    android:contentDescription="@string/tag_flaticon_url"
+                    android:src="@drawable/flaticon_tag"
+                    app:tint="@color/background_blue"
+                    android:scaleType="centerInside"
+                    android:scaleX="0.9"
+                    android:scaleY="0.9"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
+                android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/button_close_note_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/background_dark"
+                    android:contentDescription="@string/dots_vertical_url"
+                    android:src="@drawable/flaticon_dots_vertical"
+                    app:tint="@color/white"
+                    android:scaleType="centerInside"
+                    android:scaleX="0.75"
+                    android:scaleY="0.75"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator_bottom_layout_2"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:minHeight="115dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/mainBottomMenu"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom"
+            android:backgroundTint="@color/background_dark"
+            app:fabAlignmentMode="center"
+            app:fabCradleMargin="8dp"
+            app:fabCradleRoundedCornerRadius="50dp"
+            app:fabCradleVerticalOffset="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:baselineAligned="true"
+                android:gravity="start"
+                android:isScrollContainer="true"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/burger_menu_linear_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/burger_menu_Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@color/background_dark"
+                        android:contentDescription="@string/burger_menu_flaticon_url"
+                        android:scaleType="centerInside"
+                        android:scaleX="0.6"
+                        android:scaleY="0.6"
+                        android:src="@drawable/flaticon_burger_bar"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/burger_menu_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pomodoro_linear_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/pomodoro_Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@color/background_dark"
+                        android:contentDescription="@string/pomodoro_flaticon_url"
+                        android:scaleType="centerInside"
+                        android:scaleX="0.6"
+                        android:scaleY="0.6"
+                        android:src="@drawable/flaticon_pomodoro"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/pomodoro_Text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/timer"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gallery_linearLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/gallery_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@color/background_dark"
+                        android:contentDescription="@string/report_flaticon_url"
+                        android:scaleType="centerInside"
+                        android:scaleX="0.5"
+                        android:scaleY="0.5"
+                        android:src="@drawable/flaticon_gallery"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/gallery_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/gallery"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/settings_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/settings_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@color/background_dark"
+                        android:contentDescription="@string/gear_flaticon_url"
+                        android:scaleType="centerInside"
+                        android:scaleX="0.48"
+                        android:scaleY="0.48"
+                        android:src="@drawable/flaticon_gear"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/settings_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/settings"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/calendarView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/background_blue"
+            android:contentDescription="@string/calendar_flaticon_url"
+            android:elevation="3dp"
+            android:src="@drawable/flaticon_calendar_from"
+            app:layout_anchor="@id/mainBottomMenu"
+            app:tint="@color/black">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
